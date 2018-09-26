@@ -50,6 +50,7 @@ client.on('messageCreate', async msg => {
 		if(!serverQueue) return msg.channel.createMessage('❌ | Im not playing anything right now');
 		if(!msg.member.voiceState.channelID) return msg.channel.createMessage('❌ | You must join voice channel to stop queue');
 		serverQueue.songs = [];
+		msg.channel.createMessage('✅ | Stop current queue');
 		return client.voiceConnections.get(msg.member.guild.id).stopPlaying();
 	}else if(command === 'loop'){
 		const serverQueue = queue.get(msg.member.guild.id);
@@ -91,7 +92,7 @@ async function handleVideo(video, msg, voiceChannel, hide = false){
 		return play(msg.channel.guild, queueConstruct.songs[0]);
 	}
 	serverQueue.songs.push(song);
-	if(!hide) return msg.channel.createMessage();
+	if(!hide) return msg.channel.createMessage(`✅ | **${song.title}** added to queue`);
 }
 
 function play(guild, song){
