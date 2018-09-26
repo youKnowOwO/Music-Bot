@@ -4,7 +4,7 @@
   "description": "A simple music bot with queue system",
   "start": "index.js",
   "scripts": {
-	  "main": "node index.js"
+	  "start": "node index.js"
   },
   "keywords": [
     "discord",
