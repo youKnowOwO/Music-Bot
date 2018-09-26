@@ -1,0 +1,31 @@
+{
+  "name": "Jukebox",
+  "version": "0.1.0",
+  "description": "A simple music bot with queue system",
+  "start": "index.js",
+  "scripts": {
+	  "main": "node index.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "discordbot"
+  ],
+  "author": "youKnowOwO",
+  "license": "MIT",
+  "dependencies": {
+    "eris": "^0.9.0",
+    "simple-youtube-api": "^5.0.2",
+    "ytdl-core": "^0.25.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-aqua": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "aqua",
+    "rules": {
+      "no-console": 0
+    }
+  }
+}
